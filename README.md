@@ -3,8 +3,8 @@
 <img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat">
 [![API](https://img.shields.io/badge/API-14%2B-yellow.svg?style=flat)](https://android-arsenal.com/api?level=14)
 
-Bubble View for Android. Extends FrameLayout.
-
+Bubble View for Android. BubbleLayout Extends the FrameLayout.<br>
+Easily custom stroke width and color, arrow size, position and direction.
 
 # Gradle
 Add the dependency to your build.gradle.
@@ -14,7 +14,7 @@ dependencies {
 }
 ```
 
-## License
+# License
 
 Copyright 2016 MasayukiSuda
 
