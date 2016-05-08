@@ -6,8 +6,7 @@
 Bubble View for Android. Easily custom stroke width and color, arrow size, position and direction.<br>
 BubbleLayout Extends the FrameLayout.
 
-<img src="art/bubbleLayout.png" width="50%"><br>
-<img src="art/popup.gif" width="30%">
+<img src="art/all.gif" width="40%">
 
 # Gradle
 Add the dependency to your build.gradle.
