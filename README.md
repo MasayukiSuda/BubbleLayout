@@ -17,18 +17,21 @@ dependencies {
 }
 ```
 
-# Usage
-<img src="art/sample1.png" width="20%">
+# Basic Usage
+<img src="art/sample3.png" width="20%"><br>
+Include the BubbleLayout widget in your layout.
 
 ```xml
 <com.daasuu.bl.BubbleLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
     android:padding="8dp"
-    app:bl_arrowDirection="left"
+    app:bl_arrowDirection="right"
     app:bl_arrowHeight="8dp"
     app:bl_arrowPosition="16dp"
     app:bl_arrowWidth="8dp"
+    app:bl_cornersRadius="6dp"
     app:bl_strokeWidth="1dp">
 
     <TextView
@@ -41,7 +44,25 @@ dependencies {
 
 </com.daasuu.bl.BubbleLayout>
 ```
-<br>
+# Attributes
+There are several attributes you can set:
+
+| attr | description |
+|:---|:---|
+| bl_arrowWidth | Width of the arrow, default 8dp |
+| bl_arrowHeight | Height of the arrow, default 8dp |
+| bl_arrowPosition | Position of the arrow, default 12dp |
+| bl_cornersRadius | Corner radius of the BubbleLayout, default 0dp |
+| bl_bubbleColor | Color of the BubbleLayout, default white |
+| bl_strokeWidth | Width of the stroke, default 0dp |
+| bl_strokeColor | Color of the stroke, default GLAY |
+| bl_arrowDirection | Drawing position of the arrow : 'left' or 'top' or 'right' or 'bottom', default 'left' |
+
+
+
+
+
+# Samples
 <img src="art/sample2.png" width="20%">
 ```xml
 <com.daasuu.bl.BubbleLayout
@@ -79,18 +100,16 @@ dependencies {
 </com.daasuu.bl.BubbleLayout>
 ```
 <br>
-<img src="art/sample3.png" width="20%">
+<img src="art/sample1.png" width="20%">
 ```xml
 <com.daasuu.bl.BubbleLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="12dp"
     android:padding="8dp"
-    app:bl_arrowDirection="right"
+    app:bl_arrowDirection="left"
     app:bl_arrowHeight="8dp"
     app:bl_arrowPosition="16dp"
     app:bl_arrowWidth="8dp"
-    app:bl_cornersRadius="6dp"
     app:bl_strokeWidth="1dp">
 
     <TextView
