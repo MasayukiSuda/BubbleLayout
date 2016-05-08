@@ -3,8 +3,8 @@
 <img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat">
 [![API](https://img.shields.io/badge/API-14%2B-yellow.svg?style=flat)](https://android-arsenal.com/api?level=14)
 
-Bubble View for Android. BubbleLayout Extends the FrameLayout.<br>
-Easily custom stroke width and color, arrow size, position and direction.
+Bubble View for Android. Easily custom stroke width and color, arrow size, position and direction.<br>
+BubbleLayout Extends the FrameLayout.
 
 <img src="art/bubbleLayout.png" width="50%"><br>
 <img src="art/popup.gif" width="30%">
@@ -129,7 +129,7 @@ There are several attributes you can set:
 Button button = (Button) findViewById(R.id.btn_popup);
 
 BubbleLayout bubbleLayout = (BubbleLayout) LayoutInflater.from(this).inflate(R.layout.layout_sample_popup, null);
-popupWindow = BubblePopupHelper.create(this, bubbleLayout);
+PopupWindow popupWindow = BubblePopupHelper.create(this, bubbleLayout);
 
 button.setOnClickListener(new View.OnClickListener() {
     @Override
