@@ -53,7 +53,7 @@ There are several attributes you can set:
 | bl_arrowHeight | Height of the arrow, default 8dp |
 | bl_arrowPosition | Position of the arrow, default 12dp |
 | bl_cornersRadius | Corner radius of the BubbleLayout, default 0dp |
-| bl_bubbleColor | Color of the BubbleLayout, default white |
+| bl_bubbleColor | Color of the BubbleLayout, default WHITE |
 | bl_strokeWidth | Width of the stroke, default 0dp |
 | bl_strokeColor | Color of the stroke, default GLAY |
 | bl_arrowDirection | Drawing position of the arrow : 'left' or 'top' or 'right' or 'bottom', default 'left' |
