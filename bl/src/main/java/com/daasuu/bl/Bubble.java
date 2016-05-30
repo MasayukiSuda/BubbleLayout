@@ -25,7 +25,7 @@ class Bubble extends Drawable {
     private float mArrowPosition;
     private float mStrokeWidth;
 
-    public Bubble(RectF rect, float arrowWidth, float cornersRadius, float arrowHeight, float arrowPosition, float strokeWidth, int strokeColor, int bubbleColor, ArrowDirection arrowDirection) {
+    public Bubble(RectF rect, float arrowWidth, float cornersRadius, float arrowHeight, float arrowPosition, float strokeWidth, int strokeColor, int bubbleColor, @BubbleLayout.ArrowDirection int arrowDirection) {
         this.mRect = rect;
 
         this.mArrowWidth = arrowWidth;
@@ -86,9 +86,9 @@ class Bubble extends Drawable {
         return (int) mRect.height();
     }
 
-    private void initPath(ArrowDirection mArrowDirection, Path path, float strokeWidth) {
+    private void initPath(@BubbleLayout.ArrowDirection int mArrowDirection, Path path, float strokeWidth) {
         switch (mArrowDirection) {
-            case LEFT:
+            case BubbleLayout.ARROW_DIRECTION_LEFT:
                 if (mCornersRadius <= 0) {
                     initLeftSquarePath(mRect, path, strokeWidth);
                     break;
@@ -101,7 +101,7 @@ class Bubble extends Drawable {
 
                 initLeftRoundedPath(mRect, path, strokeWidth);
                 break;
-            case TOP:
+            case BubbleLayout.ARROW_DIRECTION_TOP:
                 if (mCornersRadius <= 0) {
                     initTopSquarePath(mRect, path, strokeWidth);
                     break;
@@ -115,7 +115,7 @@ class Bubble extends Drawable {
                 initTopRoundedPath(mRect, path, strokeWidth);
 
                 break;
-            case RIGHT:
+            case BubbleLayout.ARROW_DIRECTION_RIGHT:
                 if (mCornersRadius <= 0) {
                     initRightSquarePath(mRect, path, strokeWidth);
                     break;
@@ -129,7 +129,7 @@ class Bubble extends Drawable {
                 initRightRoundedPath(mRect, path, strokeWidth);
 
                 break;
-            case BOTTOM:
+            case BubbleLayout.ARROW_DIRECTION_BOTTOM:
                 if (mCornersRadius <= 0) {
                     initBottomSquarePath(mRect, path, strokeWidth);
                     break;
