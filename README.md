@@ -13,7 +13,7 @@ BubbleLayout Extends the FrameLayout.
 Add the dependency to your build.gradle.
 ```
 dependencies {
-    compile 'com.daasuu:BubbleLayout:1.0.0'
+    compile 'com.daasuu:BubbleLayout:1.1.0'
 }
 ```
 
