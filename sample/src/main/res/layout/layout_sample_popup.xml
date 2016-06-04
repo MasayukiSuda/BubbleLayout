@@ -4,7 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="@dimen/activity_horizontal_margin"
-    app:bl_arrowDirection="top"
+    app:bl_arrowDirection="bottom"
     app:bl_arrowHeight="12dp"
     app:bl_arrowPosition="16dp"
     app:bl_arrowWidth="8dp"
