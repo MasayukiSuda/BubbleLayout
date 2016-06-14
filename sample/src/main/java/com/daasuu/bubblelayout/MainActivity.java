@@ -7,8 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.PopupWindow;
+
+import com.daasuu.bl.ArrowDirection;
 import com.daasuu.bl.BubbleLayout;
 import com.daasuu.bl.BubblePopupHelper;
+
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
                 int[] location = new int[2];
                 v.getLocationInWindow(location);
                 if (random.nextBoolean()) {
-                    bubbleLayout.setArrowDirection(BubbleLayout.ARROW_DIRECTION_TOP);
+                    bubbleLayout.setArrowDirection(ArrowDirection.TOP);
                 } else {
-                    bubbleLayout.setArrowDirection(BubbleLayout.ARROW_DIRECTION_BOTTOM);
+                    bubbleLayout.setArrowDirection(ArrowDirection.BOTTOM);
                 }
                 popupWindow.showAtLocation(v, Gravity.NO_GRAVITY, location[0], v.getHeight() + location[1]);
             }

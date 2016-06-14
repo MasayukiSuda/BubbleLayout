@@ -5,7 +5,6 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.RectF;
-import android.support.annotation.IntDef;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.widget.FrameLayout;
@@ -18,19 +17,7 @@ public class BubbleLayout extends FrameLayout {
 
     public static float DEFAULT_STROKE_WIDTH = -1;
 
-    public static final int ARROW_DIRECTION_LEFT = 0;
-    public static final int ARROW_DIRECTION_RIGHT = 1;
-    public static final int ARROW_DIRECTION_TOP = 2;
-    public static final int ARROW_DIRECTION_BOTTOM = 3;
-
-    @IntDef(value = {
-            ARROW_DIRECTION_LEFT, ARROW_DIRECTION_RIGHT, ARROW_DIRECTION_TOP, ARROW_DIRECTION_BOTTOM
-    })
-    @interface ArrowDirection {
-    }
-
-    @ArrowDirection
-    private int mArrowDirection;
+    private ArrowDirection mArrowDirection;
     private Bubble mBubble;
 
     private float mArrowWidth;
@@ -66,22 +53,8 @@ public class BubbleLayout extends FrameLayout {
                 a.getDimension(R.styleable.BubbleLayout_bl_strokeWidth, DEFAULT_STROKE_WIDTH);
         mStrokeColor = a.getColor(R.styleable.BubbleLayout_bl_strokeColor, Color.GRAY);
 
-        int location = a.getInt(R.styleable.BubbleLayout_bl_arrowDirection, ARROW_DIRECTION_LEFT);
-        switch (location) {
-            case ARROW_DIRECTION_RIGHT:
-                mArrowDirection = ARROW_DIRECTION_RIGHT;
-                break;
-            case ARROW_DIRECTION_TOP:
-                mArrowDirection = ARROW_DIRECTION_TOP;
-                break;
-            case ARROW_DIRECTION_BOTTOM:
-                mArrowDirection = ARROW_DIRECTION_BOTTOM;
-                break;
-            case ARROW_DIRECTION_LEFT:
-            default:
-                mArrowDirection = ARROW_DIRECTION_LEFT;
-                break;
-        }
+        int location = a.getInt(R.styleable.BubbleLayout_bl_arrowDirection, ArrowDirection.LEFT.getValue());
+        mArrowDirection = ArrowDirection.fromInt(location);
 
         a.recycle();
         initPadding();
@@ -113,16 +86,16 @@ public class BubbleLayout extends FrameLayout {
         int paddingTop = getPaddingTop();
         int paddingBottom = getPaddingBottom();
         switch (mArrowDirection) {
-            case ARROW_DIRECTION_LEFT:
+            case LEFT:
                 paddingLeft += mArrowWidth;
                 break;
-            case ARROW_DIRECTION_RIGHT:
+            case RIGHT:
                 paddingRight += mArrowWidth;
                 break;
-            case ARROW_DIRECTION_TOP:
+            case TOP:
                 paddingTop += mArrowHeight;
                 break;
-            case ARROW_DIRECTION_BOTTOM:
+            case BOTTOM:
                 paddingBottom += mArrowHeight;
                 break;
         }
@@ -141,16 +114,16 @@ public class BubbleLayout extends FrameLayout {
         int paddingTop = getPaddingTop();
         int paddingBottom = getPaddingBottom();
         switch (mArrowDirection) {
-            case ARROW_DIRECTION_LEFT:
+            case LEFT:
                 paddingLeft -= mArrowWidth;
                 break;
-            case ARROW_DIRECTION_RIGHT:
+            case RIGHT:
                 paddingRight -= mArrowWidth;
                 break;
-            case ARROW_DIRECTION_TOP:
+            case TOP:
                 paddingTop -= mArrowHeight;
                 break;
-            case ARROW_DIRECTION_BOTTOM:
+            case BOTTOM:
                 paddingBottom -= mArrowHeight;
                 break;
         }
@@ -168,7 +141,7 @@ public class BubbleLayout extends FrameLayout {
         return dp * (metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
     }
 
-    public BubbleLayout setArrowDirection(@ArrowDirection int arrowDirection) {
+    public BubbleLayout setArrowDirection(ArrowDirection arrowDirection) {
         resetPadding();
         mArrowDirection = arrowDirection;
         initPadding();
@@ -221,7 +194,7 @@ public class BubbleLayout extends FrameLayout {
         return this;
     }
 
-    public int getArrowDirection() {
+    public ArrowDirection getArrowDirection() {
         return mArrowDirection;
     }
 
