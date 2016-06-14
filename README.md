@@ -13,7 +13,7 @@ BubbleLayout Extends the FrameLayout.
 Add the dependency to your build.gradle.
 ```
 dependencies {
-    compile 'com.daasuu:BubbleLayout:1.1.0'
+    compile 'com.daasuu:BubbleLayout:1.1.1'
 }
 ```
 
@@ -130,15 +130,22 @@ Button button = (Button) findViewById(R.id.btn_popup);
 
 BubbleLayout bubbleLayout = (BubbleLayout) LayoutInflater.from(this).inflate(R.layout.layout_sample_popup, null);
 PopupWindow popupWindow = BubblePopupHelper.create(this, bubbleLayout);
+final Random random = new Random();
 
 button.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         int[] location = new int[2];
         v.getLocationInWindow(location);
+        if (random.nextBoolean()) {
+            bubbleLayout.setArrowDirection(ArrowDirection.TOP);
+        } else {
+            bubbleLayout.setArrowDirection(ArrowDirection.BOTTOM);
+        }
         popupWindow.showAtLocation(v, Gravity.NO_GRAVITY, location[0], v.getHeight() + location[1]);
     }
 });
+
 ```
 layout_sample_popup.xml
 ```xml
