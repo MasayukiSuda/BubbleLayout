@@ -7,7 +7,7 @@
 Bubble View for Android with custom stroke width and color, arrow size, position and direction.<br>
 BubbleLayout Extends the FrameLayout.
 
-<img src="art/all.gif" width="40%">
+<img src="art/all.gif" width="40%"/>
 
 # Gradle
 Add the dependency to your build.gradle.
@@ -18,7 +18,7 @@ dependencies {
 ```
 
 # Basic Usage
-<img src="art/sample3.png" width="20%"><br>
+<img src="art/sample3.png" width="20%"/>
 Include the BubbleLayout widget in your layout.
 
 ```xml
@@ -63,7 +63,9 @@ There are several attributes you can set:
 
 
 # Samples
-<img src="art/sample2.png" width="20%">
+
+<img src="art/sample2.png" width="20%"/>
+
 ```xml
 <com.daasuu.bl.BubbleLayout
     android:layout_width="wrap_content"
@@ -99,8 +101,9 @@ There are several attributes you can set:
 
 </com.daasuu.bl.BubbleLayout>
 ```
-<br>
-<img src="art/sample1.png" width="20%">
+
+<img src="art/sample1.png" width="20%"/>
+
 ```xml
 <com.daasuu.bl.BubbleLayout
     android:layout_width="wrap_content"
@@ -119,13 +122,12 @@ There are several attributes you can set:
         android:layout_marginRight="4dp"
         android:text="BubbleLayout"
         android:textColor="@android:color/holo_red_dark" />
-
 </com.daasuu.bl.BubbleLayout>
 ```
 
-<br>
-<img src="art/popup.gif" width="30%">
-```JAVA
+<img src="art/popup.gif" width="30%"/>
+
+```java
 Button button = (Button) findViewById(R.id.btn_popup);
 
 BubbleLayout bubbleLayout = (BubbleLayout) LayoutInflater.from(this).inflate(R.layout.layout_sample_popup, null);
@@ -145,9 +147,9 @@ button.setOnClickListener(new View.OnClickListener() {
         popupWindow.showAtLocation(v, Gravity.NO_GRAVITY, location[0], v.getHeight() + location[1]);
     }
 });
-
 ```
 layout_sample_popup.xml
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <com.daasuu.bl.BubbleLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -169,12 +171,8 @@ layout_sample_popup.xml
         android:layout_marginRight="4dp"
         android:text="BubbleLayout Popup"
         android:textColor="@android:color/white" />
-
 </com.daasuu.bl.BubbleLayout>
 ```
-
-
-
 # License
 
 Copyright 2016 MasayukiSuda
