@@ -1,9 +1,8 @@
 package com.daasuu.bl;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.view.ViewGroup;
 import android.widget.PopupWindow;
 
@@ -22,13 +21,7 @@ public class BubblePopupHelper {
         popupWindow.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
         popupWindow.setAnimationStyle(android.R.style.Animation_Dialog);
         // change background color to transparent
-        Drawable drawable;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            drawable = context.getDrawable(R.drawable.popup_window_transparent);
-        } else {
-            drawable = context.getResources().getDrawable(R.drawable.popup_window_transparent);
-        }
-        popupWindow.setBackgroundDrawable(drawable);
+        popupWindow.setBackgroundDrawable(ContextCompat.getDrawable(context, R.drawable.popup_window_transparent));
 
         return popupWindow;
     }
