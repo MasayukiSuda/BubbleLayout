@@ -14,6 +14,10 @@
             <enum name="right" value="1" />
             <enum name="top" value="2" />
             <enum name="bottom" value="3" />
+            <enum name="left_center" value="4"/>
+            <enum name="right_center" value="5"/>
+            <enum name="top_center" value="6"/>
+            <enum name="bottom_center" value="7"/>
         </attr>
     </declare-styleable>
 </resources>

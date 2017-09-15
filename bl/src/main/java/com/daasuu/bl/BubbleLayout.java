@@ -76,6 +76,17 @@ public class BubbleLayout extends FrameLayout {
         if (right < left || bottom < top) return;
 
         RectF rectF = new RectF(left, top, right, bottom);
+        switch(mArrowDirection) {
+            case LEFT_CENTER:
+            case RIGHT_CENTER:
+                mArrowPosition = (bottom - top) / 2 - mArrowHeight / 2;
+                break;
+            case TOP_CENTER:
+            case BOTTOM_CENTER:
+                mArrowPosition = (right - left) / 2 - mArrowWidth / 2;
+            default:
+                break;
+        }
         mBubble = new Bubble(rectF, mArrowWidth, mCornersRadius, mArrowHeight, mArrowPosition,
                 mStrokeWidth, mStrokeColor, mBubbleColor, mArrowDirection);
     }
@@ -87,15 +98,19 @@ public class BubbleLayout extends FrameLayout {
         int paddingBottom = getPaddingBottom();
         switch (mArrowDirection) {
             case LEFT:
+            case LEFT_CENTER:
                 paddingLeft += mArrowWidth;
                 break;
             case RIGHT:
+            case RIGHT_CENTER:
                 paddingRight += mArrowWidth;
                 break;
             case TOP:
+            case TOP_CENTER:
                 paddingTop += mArrowHeight;
                 break;
             case BOTTOM:
+            case BOTTOM_CENTER:
                 paddingBottom += mArrowHeight;
                 break;
         }
@@ -115,15 +130,19 @@ public class BubbleLayout extends FrameLayout {
         int paddingBottom = getPaddingBottom();
         switch (mArrowDirection) {
             case LEFT:
+            case LEFT_CENTER:
                 paddingLeft -= mArrowWidth;
                 break;
             case RIGHT:
+            case RIGHT_CENTER:
                 paddingRight -= mArrowWidth;
                 break;
             case TOP:
+            case TOP_CENTER:
                 paddingTop -= mArrowHeight;
                 break;
             case BOTTOM:
+            case BOTTOM_CENTER:
                 paddingBottom -= mArrowHeight;
                 break;
         }
