@@ -13,7 +13,7 @@ BubbleLayout Extends the FrameLayout.
 Add the dependency to your build.gradle.
 ```
 dependencies {
-    compile 'com.daasuu:BubbleLayout:1.1.1'
+    compile 'com.daasuu:BubbleLayout:1.2.0'
 }
 ```
 
@@ -56,7 +56,7 @@ There are several attributes you can set:
 | bl_bubbleColor | Color of the BubbleLayout, default WHITE |
 | bl_strokeWidth | Width of the stroke, default 0dp |
 | bl_strokeColor | Color of the stroke, default GLAY |
-| bl_arrowDirection | Drawing position of the arrow : 'left' or 'top' or 'right' or 'bottom', default 'left' |
+| bl_arrowDirection | Drawing position of the arrow : 'left' or 'top' or 'right' or 'bottom' or 'left_center' or 'top_center' or 'right_center' or 'bottom_center' default 'left' |
 
 
 
