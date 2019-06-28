@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION as int
@@ -25,11 +24,3 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.0'
 }
 
-publish {
-    userOrg = USER_ID
-    groupId = GROUP
-    artifactId = ARTIFACT_NAME
-    publishVersion = VERSION_NAME
-    desc = ARTIFACT_DESCRIPTION
-    website = SITE_URL
-}
