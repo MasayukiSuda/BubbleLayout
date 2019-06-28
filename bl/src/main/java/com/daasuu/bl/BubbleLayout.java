@@ -76,7 +76,7 @@ public class BubbleLayout extends FrameLayout {
         if (right < left || bottom < top) return;
 
         RectF rectF = new RectF(left, top, right, bottom);
-        switch(mArrowDirection) {
+        switch (mArrowDirection) {
             case LEFT_CENTER:
             case RIGHT_CENTER:
                 mArrowPosition = (bottom - top) / 2 - mArrowHeight / 2;
