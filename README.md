@@ -10,12 +10,23 @@ BubbleLayout Extends the FrameLayout.
 <img src="art/all.gif" width="40%"/>
 
 # Gradle
-Add the dependency to your build.gradle.
-```
-dependencies {
-    compile 'com.daasuu:BubbleLayout:1.2.0'
+Step 1. Add the JitPack repository to your build file
+```groovy
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
 }
 ```
+Step 2. Add the dependency
+```groovy
+dependencies {
+        implementation 'com.github.MasayukiSuda:BubbleLayout:v1.2.1'
+}
+```
+
+
 
 # Basic Usage
 <img src="art/sample3.png" width="20%"/>
