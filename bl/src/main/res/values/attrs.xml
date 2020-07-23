@@ -18,6 +18,7 @@
             <enum name="right_center" value="5"/>
             <enum name="top_center" value="6"/>
             <enum name="bottom_center" value="7"/>
+            <enum name="top_right" value="8"/>
         </attr>
     </declare-styleable>
 </resources>
