@@ -135,6 +135,7 @@ class Bubble extends Drawable {
                 break;
             case BOTTOM:
             case BOTTOM_CENTER:
+            case BOTTOM_RIGHT:
                 if (mCornersRadius <= 0) {
                     initBottomSquarePath(mRect, path, strokeWidth);
                     break;

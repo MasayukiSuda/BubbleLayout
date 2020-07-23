@@ -86,6 +86,7 @@ public class BubbleLayout extends FrameLayout {
                 mArrowPosition = (right - left) / 2f - mArrowWidth / 2;
                 break;
             case TOP_RIGHT:
+            case BOTTOM_RIGHT:
                 mArrowPosition = right - mArrowPosition - mArrowWidth / 2;
             default:
                 break;
@@ -115,6 +116,7 @@ public class BubbleLayout extends FrameLayout {
                 break;
             case BOTTOM:
             case BOTTOM_CENTER:
+            case BOTTOM_RIGHT:
                 paddingBottom += mArrowHeight;
                 break;
         }
@@ -148,6 +150,7 @@ public class BubbleLayout extends FrameLayout {
                 break;
             case BOTTOM:
             case BOTTOM_CENTER:
+            case BOTTOM_RIGHT:
                 paddingBottom -= mArrowHeight;
                 break;
         }

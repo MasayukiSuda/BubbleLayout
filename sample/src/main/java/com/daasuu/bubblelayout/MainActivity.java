@@ -1,12 +1,9 @@
 package com.daasuu.bubblelayout;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.*;
@@ -17,9 +14,17 @@ import com.daasuu.bl.BubblePopupHelper;
 
 import java.util.Random;
 
+import static com.daasuu.bl.ArrowDirection.*;
+
 public class MainActivity extends AppCompatActivity {
 
     private PopupWindow popupWindow;
+    private ArrowDirection[] randomArrowDirections = {
+        TOP,
+        BOTTOM,
+        TOP_RIGHT,
+        BOTTOM_RIGHT
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +45,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int xoff = 0;
                 int yoff = 0;
-                if (random.nextBoolean()) {
-                    bubbleLayout.setArrowDirection(ArrowDirection.TOP);
-                } else {
-                    bubbleLayout.setArrowDirection(ArrowDirection.TOP_RIGHT);
-                    xoff = v.getWidth() - bubbleWidth;
+                ArrowDirection direction = randomArrowDirections[random.nextInt(randomArrowDirections.length)];
+                switch (direction) {
+                    case TOP_RIGHT:
+                    case BOTTOM_RIGHT:
+                        xoff = v.getWidth() - bubbleWidth;
+                        break;
+                    case TOP:
+                    case BOTTOM:
                 }
+                bubbleLayout.setArrowDirection(direction);
                 bubbleLayout.setArrowPosition(v.getWidth() / 2f);
                 popupWindow.showAsDropDown(v, xoff, yoff);
             }
