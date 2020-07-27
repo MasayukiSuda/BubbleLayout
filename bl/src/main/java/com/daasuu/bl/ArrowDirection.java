@@ -8,11 +8,14 @@ public enum ArrowDirection {
     RIGHT(1),
     TOP(2),
     BOTTOM(3),
-    //CENTER
+    // CENTER
     LEFT_CENTER(4),
     RIGHT_CENTER(5),
     TOP_CENTER(6),
-    BOTTOM_CENTER(7);
+    BOTTOM_CENTER(7),
+    // HORIZONTAL > RIGHT
+    TOP_RIGHT(8),
+    BOTTOM_RIGHT(9);
 
 
     private int value;
