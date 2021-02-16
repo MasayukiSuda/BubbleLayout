@@ -15,7 +15,9 @@ public enum ArrowDirection {
     BOTTOM_CENTER(7),
     // HORIZONTAL > RIGHT
     TOP_RIGHT(8),
-    BOTTOM_RIGHT(9);
+    BOTTOM_RIGHT(9),
+    // None if dont have any direction
+    NONE(10);
 
 
     private int value;
