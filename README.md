@@ -22,7 +22,7 @@ allprojects {
 Step 2. Add the dependency
 ```groovy
 dependencies {
-        implementation 'com.github.MasayukiSuda:BubbleLayout:v1.2.1'
+        implementation 'com.github.MasayukiSuda:BubbleLayout:v1.2.2'
 }
 ```
 
